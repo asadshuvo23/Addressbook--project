@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<title>Company Address Book</title>
+</head>
+<body>
+<div class="container mt-5 text-center bg-light"> 
+	<div th:replace="fragments/header :: header(list)"></div>
+	<div>
+	
+	<form tr th:each="user: ${users}">
+  		<div class="row">
+    	<div class="col">
+      	<input type="text" class="form-control" placeholder="First name">
+    	</div>
+    	<div class="col">
+      	<input type="text" class="form-control" placeholder="Last name">
+    	</div>
+  		</div>
+	</form>
+
+	<form>
+  		<div class="row">
+    	<div class="col">
+      	<input type="text" class="form-control" placeholder="Email Address">
+    	</div>
+    	<div class="col">
+      	<input type="text" class="form-control" placeholder="Office Phone">
+    	</div>
+  		</div>
+	</form>
+	
+	<form>
+  		 <div class="row">
+    	<div class="col">
+      	<input type="text" class="form-control" placeholder="Mobile">
+    	</div>
+    	<div class="col">
+      	
+    	</div>
+  		</div>
+	</form>
+	
+	<form>
+  		<div class="row" mt-5>
+    	<div class="col">
+      	<input type="text" class="form-control" placeholder="Designation">
+    	</div>
+    	<div class="col">
+      	<input type="text" class="form-control" placeholder="Department">
+    	</div>
+  		</div>
+	</form>
+	
+	<form>
+  		 <div class="row">
+    	<div class="col">
+      	<input type="text" class="form-control" placeholder="Employee ID">
+    	</div>
+    	<div class="col">
+      	
+    	</div>
+  		</div>
+	</form>
+	
+	<div class="text-right">
+	<button type="button" class="btn btn-primary btn-sm">Add</button>
+	<button type="button" class="btn btn-secondary btn-sm">Update</button>
+	<button type="button" class="btn btn-secondary btn-sm">Delete</button>
+	</div>
+
+</div>
+
+<div th:replace="fragments/header :: scripts"></div>
+  
+  </body>
+</html>
